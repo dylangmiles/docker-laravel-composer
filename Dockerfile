@@ -20,7 +20,9 @@ RUN apt-get update -y && \
     && docker-php-ext-install -j$(nproc) pcntl
 
 #Install curl 
-RUN apt-get install -y curl
+RUN apt-get install -y \
+    curl \ 
+    git
 
 
 #Install composer
